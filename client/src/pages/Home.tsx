@@ -1,5 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import TechStackSection from "@/components/TechStackSection";
+import ProfessionalRolesSection from "@/components/ProfessionalRolesSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import SkillsSection from "@/components/SkillsSection";
@@ -10,6 +12,8 @@ export default function Home() {
     <div className="min-h-screen">
       <HeroSection />
       <AboutSection />
+      <TechStackSection />
+      <ProfessionalRolesSection />
       <ProjectsSection />
       <ExperienceSection />
       <SkillsSection />
