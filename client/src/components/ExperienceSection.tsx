@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Briefcase, Calendar, MapPin, TrendingUp } from "lucide-react";
+import { Briefcase, Calendar, MapPin } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -12,8 +12,8 @@ const experiences = [
     period: "Aug 2024 – Present",
     location: "India",
     type: "Full-time",
-    description: "Leading the development of innovative technology solutions, managing product strategy, and building a team focused on creating impactful products that solve real-world problems.",
-    skills: ["Leadership", "Product Management", "Strategy", "Team Building"],
+    description: "Leading innovative technology solutions, managing product strategy, and building a team focused on impactful products.",
+    skills: ["Leadership", "Product Management", "Strategy"],
     color: "primary",
     current: true,
   },
@@ -23,8 +23,8 @@ const experiences = [
     period: "Jan 2025 – Present",
     location: "Remote",
     type: "Part-time",
-    description: "Representing Dive Money on campus, organizing events, and building awareness about financial technology solutions among students.",
-    skills: ["Marketing", "Event Management", "Community Building"],
+    description: "Representing Dive Money on campus, organizing events, and building awareness about fintech solutions among students.",
+    skills: ["Marketing", "Event Management", "Community"],
     color: "secondary",
     current: true,
   },
@@ -34,8 +34,8 @@ const experiences = [
     period: "Oct 2024 – Present",
     location: "VJIT, Hyderabad",
     type: "Volunteer",
-    description: "Contributing to open-source projects, mentoring fellow developers, and organizing tech workshops for the Google Developer Group community.",
-    skills: ["Open Source", "Mentoring", "Community", "Git"],
+    description: "Contributing to open-source projects, mentoring developers, and organizing tech workshops for the community.",
+    skills: ["Open Source", "Mentoring", "Git"],
     color: "accent",
     current: true,
   },
@@ -54,7 +54,7 @@ export default function ExperienceSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-6xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <div className="flex items-center gap-3 mb-4">
             <Briefcase className="w-6 h-6 text-primary" />
@@ -69,109 +69,117 @@ export default function ExperienceSection() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-lg text-muted-foreground mb-12"
           >
-            My professional journey in tech, from founding startups to community leadership.
+            My professional journey in tech and entrepreneurship.
           </motion.p>
 
-          <div className="space-y-8">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={`${exp.company}-${exp.title}`}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
-              >
-                <Card className="relative overflow-visible p-6 md:p-8 border-2 hover:border-primary/50 hover-elevate transition-all group">
-                  <div className="absolute top-6 right-6">
-                    {exp.current && (
-                      <Badge className="bg-secondary text-secondary-foreground">
-                        <TrendingUp className="w-3 h-3 mr-1" />
-                        Current
-                      </Badge>
-                    )}
-                  </div>
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-secondary opacity-30" />
 
-                  <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-                    <div className="md:col-span-8">
-                      <div className="flex items-start gap-4 mb-4">
-                        <div 
-                          className="w-12 h-12 rounded-md flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110"
+            <div className="space-y-6">
+              {experiences.map((exp, index) => (
+                <motion.div
+                  key={`${exp.company}-${exp.title}`}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: 0.3 + index * 0.15, duration: 0.5 }}
+                  className="relative pl-12 md:pl-20"
+                >
+                  {/* Timeline dot */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={isInView ? { scale: 1 } : {}}
+                    transition={{ delay: 0.4 + index * 0.15, duration: 0.3 }}
+                    className="absolute left-2.5 md:left-6.5 top-6"
+                  >
+                    <div 
+                      className="w-3 h-3 rounded-full border-2 relative z-10"
+                      style={{
+                        backgroundColor: `hsl(var(--${exp.color}))`,
+                        borderColor: `hsl(var(--${exp.color}))`,
+                        boxShadow: `0 0 0 4px hsl(var(--background)), 0 0 12px hsl(var(--${exp.color}) / 0.5)`,
+                      }}
+                    >
+                      {exp.current && (
+                        <motion.div
+                          animate={{ scale: [1, 1.5, 1] }}
+                          transition={{ repeat: Infinity, duration: 2 }}
+                          className="absolute inset-0 rounded-full"
                           style={{
-                            backgroundColor: `hsl(var(--${exp.color}) / 0.1)`,
-                            border: `2px solid hsl(var(--${exp.color}))`,
+                            backgroundColor: `hsl(var(--${exp.color}) / 0.3)`,
                           }}
-                        >
-                          <Briefcase className="w-6 h-6" style={{ color: `hsl(var(--${exp.color}))` }} />
-                        </div>
-                        
+                        />
+                      )}
+                    </div>
+                  </motion.div>
+
+                  <Card className="border-l-4 hover-elevate active-elevate-2 transition-all group" style={{
+                    borderLeftColor: `hsl(var(--${exp.color}))`
+                  }}>
+                    <div className="p-5">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-3">
                         <div className="flex-1">
-                          <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                          <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                             {exp.title}
                           </h3>
-                          <p className="text-lg font-semibold mb-2" style={{
+                          <p className="text-base font-semibold mt-1" style={{
                             color: `hsl(var(--${exp.color}))`
                           }}>
                             {exp.company}
                           </p>
-                          <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mb-4">
-                            <span className="flex items-center gap-1">
-                              <Calendar className="w-4 h-4" />
-                              {exp.period}
-                            </span>
-                            <span className="flex items-center gap-1">
-                              <MapPin className="w-4 h-4" />
-                              {exp.location}
-                            </span>
-                            <Badge variant="outline" className="text-xs">
-                              {exp.type}
-                            </Badge>
-                          </div>
                         </div>
+                        {exp.current && (
+                          <Badge className="bg-secondary text-secondary-foreground w-fit">
+                            Current
+                          </Badge>
+                        )}
                       </div>
 
-                      <p className="text-foreground/70 leading-relaxed mb-4">
+                      <div className="flex flex-wrap gap-3 text-xs text-muted-foreground mb-3">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-3 h-3" />
+                          {exp.period}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <MapPin className="w-3 h-3" />
+                          {exp.location}
+                        </span>
+                        <Badge variant="outline" className="text-xs h-5">
+                          {exp.type}
+                        </Badge>
+                      </div>
+
+                      <p className="text-sm text-foreground/70 leading-relaxed mb-3">
                         {exp.description}
                       </p>
 
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1.5">
                         {exp.skills.map((skill) => (
                           <Badge
                             key={skill}
                             variant="secondary"
-                            className="bg-muted text-foreground/80"
+                            className="text-xs bg-muted/50 text-foreground/80 h-6"
                           >
                             {skill}
                           </Badge>
                         ))}
                       </div>
                     </div>
-
-                    <div className="md:col-span-4 flex items-center justify-center md:justify-end">
-                      <div className="relative w-32 h-32">
-                        <div 
-                          className="absolute inset-0 rounded-full opacity-20 blur-xl"
-                          style={{
-                            backgroundColor: `hsl(var(--${exp.color}))`,
-                          }}
-                        />
-                        <div 
-                          className="absolute inset-0 rounded-full border-4 opacity-30"
-                          style={{
-                            borderColor: `hsl(var(--${exp.color}))`,
-                          }}
-                        />
-                        <div 
-                          className="absolute inset-4 rounded-full border-2"
-                          style={{
-                            borderColor: `hsl(var(--${exp.color}))`,
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
           </div>
+
+          {/* Decorative gradient orb */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="absolute top-1/2 right-0 w-64 h-64 opacity-10 pointer-events-none"
+          >
+            <div className="w-full h-full rounded-full bg-gradient-to-br from-primary via-accent to-secondary blur-3xl" />
+          </motion.div>
         </motion.div>
       </div>
     </section>
