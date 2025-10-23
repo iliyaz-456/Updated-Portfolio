@@ -30,7 +30,7 @@ export default function HeroSection() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="mb-6"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-tight text-primary">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-tight text-white">
               Syed Iliyaz
             </h1>
           </motion.div>

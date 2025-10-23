@@ -47,7 +47,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <button
             onClick={() => scrollToSection("#")}
-            className="text-xl font-bold text-primary hover-elevate p-2 rounded-md"
+            className="text-xl font-bold text-white hover:text-primary transition-colors hover-elevate p-2 rounded-md"
             data-testid="button-logo"
           >
             Syed Iliyaz

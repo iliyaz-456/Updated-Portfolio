@@ -55,8 +55,8 @@ export default function AboutSection() {
               className="space-y-6 text-lg text-foreground/80"
             >
               <p>
-                I'm <span className="text-primary font-semibold">Syed Iliyaz</span>, the founder and CEO of{" "}
-                <span className="text-accent font-semibold">Aternity</span>, where we're building the future of technology solutions. 
+                I'm <span className="text-white font-semibold">Syed Iliyaz</span>, the founder and CEO of{" "}
+                <span className="text-primary font-semibold">Aternity</span>, where we're building the future of technology solutions. 
                 With a passion for AI and full-stack development, I specialize in creating innovative products that solve real-world problems.
               </p>
               <p>
