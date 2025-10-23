@@ -1,0 +1,177 @@
+Build a modern, dark-themed personal portfolio website for a tech entrepreneur, AI enthusiast, and startup founder. The portfolio should be visually striking, interactive, and unique, with a sense of “heaviness” and professionalism. Use dark backgrounds (#121212, #1e1e1e) and neon or bright accent colors like electric blue, neon green, or purple for highlights, buttons, and hover effects.
+
+Website Requirements:
+
+Hero Section:
+
+Full-screen landing section with name and tagline (e.g., “AI Enthusiast | Startup Founder | Full-Stack Developer”)
+
+Animated particle or gradient background
+
+Call-to-action button (e.g., “View Projects”) with glowing hover effect
+
+Optional: short animated intro or looping video background
+
+About Section:
+
+Short professional bio, 3–4 sentences
+
+Profile picture or animated avatar
+
+Animated elements or fade-in effects as the user scrolls
+
+Projects / Case Studies Section:
+
+Showcase 5–8 projects with screenshots, GIFs, or short videos
+
+Include project title, problem → solution → results, and tech stack
+
+Use hover animations, animated cards, or neon outlines
+
+Interactive filter or category buttons to sort projects
+
+Experience / Achievements Section:
+
+Timeline or card layout showing startups, internships, hackathons, awards, and community contributions
+
+Subtle animations as the user scrolls (e.g., slide-in from left or right)
+
+Skills Section:
+
+Categorize skills (Programming, AI/ML, Tools, Leadership)
+
+Use animated circular progress bars, glowing indicators, or interactive icons
+
+Hover effect with skill descriptions
+
+Testimonials / Community Contributions Section (Optional):
+
+Cards showing mentorship, GDG workshops, AI projects, or recognitions
+
+Subtle animations for card appearance
+
+Contact Section:
+
+Simple, dark-themed form (Name, Email, Message)
+
+Links to LinkedIn, GitHub, Email, optionally Twitter/Portfolio
+
+Glowing or animated submit button
+
+Design Guidelines:
+
+Typography: modern sans-serif fonts (Poppins, Inter, Montserrat), varied font weights
+
+Layout: asymmetrical sections, overlapping cards, layered backgrounds
+
+Animations: scroll-triggered, hover effects, particle background, subtle fade-in/fade-out
+
+Color Palette: dark base (#121212 or #1e1e1e) with neon accent highlights
+
+Ensure responsive design (mobile, tablet, desktop)
+
+Include smooth transitions and micro-interactions
+
+Tech Stack:
+
+Frontend: React.js or Next.js
+
+Animations: Framer Motion, Lottie, or CSS animations
+
+Hosting-ready structure (Vercel, Netlify, or GitHub Pages compatible)
+
+Clean, maintainable code structure with separate components for each section
+
+Deliverables:
+
+Fully functional portfolio website
+
+All HTML, CSS, JS/React code ready to deploy
+
+Optimized for performance, SEO, and responsiveness
+
+Interactive, dark-themed, and visually unique
+Update the existing portfolio website code. Remove the animated moving stars or particle background from the hero section (or any other section) while keeping all other design elements, dark theme, animations, and layout intact.
+
+Ensure the hero section still has a dark background (#121212 or #1e1e1e).
+
+Keep all text, buttons, scroll animations, hover effects, and other interactive elements as they are.
+
+Remove only the particle or moving star animation code (like particles.js, tsParticles, or custom CSS/JS animations) completely.
+
+Make sure the website still loads smoothly and retains responsiveness on mobile and desktop.
+Update the existing portfolio website for Syed Iliyaz, founder of Aternity, ensuring it is unique, dark-themed, and visually attractive, not common or generic.
+
+Requirements:
+
+Hero Section:
+
+Remove the animated moving stars or particle background completely.
+
+Keep dark background (#121212 or #1e1e1e), name prominently displayed: “Syed Iliyaz”, tagline highlighting Founder of Aternity | AI & Full-Stack Developer.
+
+Retain all buttons, hover effects, scroll animations, and interactive elements.
+
+About Section:
+
+Include a short professional bio with the name Syed Iliyaz, founder of Aternity, and your skills: HTML, CSS, JavaScript, React, Node.js, MongoDB, SQL.
+
+Profile picture or avatar optional.
+
+Projects Section:
+
+Include at least these projects:
+
+Virtual Shopping AI – https://iliyaz-456.github.io/virrtualshopAI/
+
+Telemedicine (SIH 2025) – https://github.com/iliyaz-456/Telemedicine-
+
+Each project should have title, brief description, tech stack, and clickable links.
+
+Use interactive cards, hover effects, or subtle animations to make projects stand out.
+
+Experience Section:
+
+Dive Money – Student Campus Ambassador, Jan 2025 – Present
+
+GDG VJIT – Open Source Team Member, Oct 2025 – Present
+
+Aternity – Founder & CEO, Aug 2024 – Present
+
+Use timeline or card layout with smooth scroll animations.
+
+Skills Section:
+
+Show HTML, CSS, JavaScript, React, Node.js, MongoDB, SQL.
+
+Use animated progress bars, circular indicators, or glowing icons.
+
+Contact Section:
+
+Include LinkedIn: https://www.linkedin.com/in/syediliyaz18
+
+Include GitHub: https://github.com/iliyaz-456
+
+Include contact form and glowing/animated submit button.
+
+Design Guidelines:
+
+Dark background (#121212 or #1e1e1e) with neon or bright accent colors (electric blue, neon green, purple) for highlights, buttons, and hover effects.
+
+Modern fonts: Poppins, Inter, or Montserrat.
+
+Asymmetrical layout, overlapping sections, layered elements to make it unique.
+
+Smooth scroll-triggered animations, subtle hover interactions, and micro-interactions for all interactive elements.
+
+Fully responsive, optimized for performance and professional look.
+
+Tech Stack:
+
+Frontend: React.js or Next.js
+
+Animations: Framer Motion, Lottie, or CSS animations
+
+Hosting-ready (Vercel, Netlify, or GitHub Pages compatible)
+
+Deliver a fully functional, dark-themed, unique portfolio website, ready to deploy, with no particle/animated star background, keeping all other animations and interactivity intact.
