@@ -1,49 +1,51 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, Briefcase, Code2, Server, Blocks } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useRef } from "react";
+import { Briefcase, Code2, Server, Blocks, Smartphone, Rocket, Lightbulb, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const roles = [
   {
     title: "Full-Stack Developer",
     icon: Code2,
-    description: "Building end-to-end web applications with modern technologies. Specializing in React, Node.js, and the MERN stack to create seamless user experiences.",
+    description: "Building end-to-end web applications with modern technologies using React, Node.js, and the MERN stack.",
     color: "primary",
   },
   {
-    title: "Founder & Entrepreneur",
+    title: "Founder & CEO",
     icon: Briefcase,
-    description: "Leading Aternity from concept to execution. Managing product strategy, team building, and driving innovation in the tech space.",
+    description: "Leading Aternity from concept to execution, managing product strategy and driving innovation.",
     color: "accent",
   },
   {
     title: "Backend Engineer",
     icon: Server,
-    description: "Building robust and scalable server-side applications, APIs, and databases. Expertise in Node.js, Express, MongoDB, and SQL.",
+    description: "Creating robust and scalable server-side applications, APIs, and database architectures.",
     color: "secondary",
   },
   {
     title: "AI Enthusiast",
     icon: Blocks,
-    description: "Exploring artificial intelligence and machine learning to create intelligent solutions. Passionate about leveraging AI to solve real-world problems.",
+    description: "Exploring artificial intelligence and machine learning to create intelligent solutions.",
     color: "primary",
+  },
+  {
+    title: "Mobile Developer",
+    icon: Smartphone,
+    description: "Building cross-platform mobile applications with responsive and intuitive user interfaces.",
+    color: "accent",
+  },
+  {
+    title: "Product Innovator",
+    icon: Lightbulb,
+    description: "Transforming ideas into reality through creative problem-solving and strategic thinking.",
+    color: "secondary",
   },
 ];
 
 export default function ProfessionalRolesSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % roles.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + roles.length) % roles.length);
-  };
 
   return (
     <section className="py-24 md:py-32 relative overflow-hidden" ref={ref}>
@@ -54,80 +56,58 @@ export default function ProfessionalRolesSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-7xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center">
-            Professional Roles
-          </h2>
+          <div className="flex items-center gap-3 mb-4">
+            <Rocket className="w-6 h-6 text-primary" />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+              Professional Roles
+            </h2>
+          </div>
 
-          <div className="relative">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Card className="p-8 md:p-12 border-2 hover:border-primary/50 transition-all">
-                <div className="flex flex-col items-center text-center space-y-6">
-                  <div 
-                    className="w-20 h-20 rounded-full flex items-center justify-center"
-                    style={{
-                      backgroundColor: `hsl(var(--${roles[currentIndex].color}) / 0.1)`,
-                      border: `2px solid hsl(var(--${roles[currentIndex].color}))`,
-                    }}
-                  >
-                    {(() => {
-                      const Icon = roles[currentIndex].icon;
-                      return <Icon className="w-10 h-10" style={{ color: `hsl(var(--${roles[currentIndex].color}))` }} />;
-                    })()}
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-                    {roles[currentIndex].title}
-                  </h3>
-                  <p className="text-lg text-foreground/70 leading-relaxed max-w-2xl">
-                    {roles[currentIndex].description}
-                  </p>
-                </div>
-              </Card>
-            </motion.div>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="text-lg text-muted-foreground mb-12"
+          >
+            Versatile expertise across multiple domains of technology and innovation.
+          </motion.p>
 
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={prevSlide}
-                className="rounded-full"
-                data-testid="button-prev-role"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </Button>
-
-              <div className="flex gap-2">
-                {roles.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all ${
-                      index === currentIndex 
-                        ? 'w-8 bg-primary' 
-                        : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={nextSlide}
-                className="rounded-full"
-                data-testid="button-next-role"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </Button>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {roles.map((role, index) => {
+              const Icon = role.icon;
+              return (
+                <motion.div
+                  key={role.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+                >
+                  <Card className="h-full p-6 border-2 hover:border-primary/50 hover-elevate active-elevate-2 transition-all group cursor-pointer">
+                    <div className="flex flex-col items-start space-y-4">
+                      <div 
+                        className="w-14 h-14 rounded-md flex items-center justify-center transition-transform group-hover:scale-110"
+                        style={{
+                          backgroundColor: `hsl(var(--${role.color}) / 0.1)`,
+                          border: `2px solid hsl(var(--${role.color}))`,
+                        }}
+                      >
+                        <Icon className="w-7 h-7" style={{ color: `hsl(var(--${role.color}))` }} />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                          {role.title}
+                        </h3>
+                        <p className="text-foreground/70 leading-relaxed">
+                          {role.description}
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       </div>
