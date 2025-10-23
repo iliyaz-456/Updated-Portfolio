@@ -34,7 +34,7 @@ export default function AboutSection() {
               className="relative"
             >
               <div className="relative w-full max-w-md mx-auto">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-secondary rounded-lg blur-lg opacity-30" />
+                <div className="absolute -inset-1 bg-primary rounded-lg blur-lg opacity-30" />
                 <div className="relative rounded-lg overflow-hidden border-2 border-primary/30">
                   <img
                     src={profileImage}

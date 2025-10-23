@@ -74,7 +74,7 @@ export default function ExperienceSection() {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-secondary opacity-30" />
+            <div className="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-primary opacity-30" />
 
             <div className="space-y-6">
               {experiences.map((exp, index) => (
@@ -178,7 +178,7 @@ export default function ExperienceSection() {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="absolute top-1/2 right-0 w-64 h-64 opacity-10 pointer-events-none"
           >
-            <div className="w-full h-full rounded-full bg-gradient-to-br from-primary via-accent to-secondary blur-3xl" />
+            <div className="w-full h-full rounded-full bg-primary blur-3xl" />
           </motion.div>
         </motion.div>
       </div>

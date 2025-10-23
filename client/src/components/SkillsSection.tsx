@@ -73,7 +73,7 @@ export default function SkillsSection() {
                     initial={{ width: 0 }}
                     animate={isInView ? { width: `${skill.level}%` } : {}}
                     transition={{ delay: 0.5 + index * 0.1, duration: 1, ease: "easeOut" }}
-                    className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-primary via-accent to-secondary"
+                    className="absolute inset-y-0 left-0 rounded-full bg-primary"
                     style={{
                       boxShadow: hoveredSkill === skill.name ? "0 0 20px hsl(var(--primary) / 0.5)" : "none",
                     }}

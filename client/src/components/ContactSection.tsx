@@ -121,14 +121,11 @@ export default function ContactSection() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full group relative overflow-hidden"
+                  className="w-full"
                   data-testid="button-submit"
                 >
-                  <span className="relative z-10 flex items-center justify-center gap-2">
-                    <Send className="w-4 h-4" />
-                    Send Message
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <Send className="w-4 h-4 mr-2" />
+                  Send Message
                 </Button>
               </form>
             </motion.div>

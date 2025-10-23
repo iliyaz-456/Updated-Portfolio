@@ -30,10 +30,8 @@ export default function HeroSection() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="mb-6"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-tight">
-              <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-                Syed Iliyaz
-              </span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-tight text-primary">
+              Syed Iliyaz
             </h1>
           </motion.div>
 
@@ -65,11 +63,9 @@ export default function HeroSection() {
             <Button
               size="lg"
               onClick={() => scrollToSection("projects")}
-              className="group relative overflow-hidden"
               data-testid="button-view-projects"
             >
-              <span className="relative z-10">View Projects</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+              View Projects
             </Button>
 
             <Button

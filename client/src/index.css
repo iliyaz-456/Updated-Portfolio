@@ -48,43 +48,38 @@
 
   --popover-border: 0 0% 18%;
 
-  /* Electric blue accent */
-  --primary: 210 100% 60%;
+  /* Dark blue primary */
+  --primary: 220 90% 50%;
 
-  --primary-foreground: 210 100% 98%;
+  --primary-foreground: 220 90% 98%;
 
-  /* Neon green accent */
-  --secondary: 140 100% 55%;
+  /* Medium blue secondary */
+  --secondary: 220 70% 40%;
 
-  --secondary-foreground: 140 100% 10%;
+  --secondary-foreground: 220 70% 98%;
 
   --muted: 0 0% 16%;
 
   --muted-foreground: 0 0% 62%;
 
-  /* Purple accent */
-  --accent: 270 80% 65%;
+  /* Light blue accent */
+  --accent: 220 85% 55%;
 
-  --accent-foreground: 270 80% 98%;
+  --accent-foreground: 220 85% 98%;
 
   --destructive: 0 84% 55%;
 
   --destructive-foreground: 0 0% 98%;
 
   --input: 0 0% 20%;
-  --ring: 210 100% 60%;
+  --ring: 220 90% 50%;
   
-  /* Neon accent colors for charts/decorative elements */
-  --chart-1: 210 100% 60%;
-  --chart-2: 140 100% 55%;
-  --chart-3: 270 80% 65%;
-  --chart-4: 30 90% 60%;
-  --chart-5: 340 80% 65%;
-
-  /* Neon glow colors */
-  --neon-blue: 210 100% 60%;
-  --neon-green: 140 100% 55%;
-  --neon-purple: 270 80% 65%;
+  /* Dark blue accent colors for charts/decorative elements */
+  --chart-1: 220 90% 50%;
+  --chart-2: 220 70% 40%;
+  --chart-3: 220 85% 55%;
+  --chart-4: 220 80% 45%;
+  --chart-5: 220 75% 48%;
 
   --font-sans: 'Poppins', 'Inter', 'Montserrat', sans-serif;
   --font-serif: Georgia, serif;
@@ -98,11 +93,6 @@
   --shadow-lg: 0px 2px 0px 0px hsl(0 0% 0% / 0.32), 0px 4px 6px -1px hsl(0 0% 0% / 0.36);
   --shadow-xl: 0px 2px 0px 0px hsl(0 0% 0% / 0.36), 0px 8px 10px -1px hsl(0 0% 0% / 0.40);
   --shadow-2xl: 0px 2px 0px 0px hsl(0 0% 0% / 0.40);
-  
-  /* Neon glow effects */
-  --glow-blue: 0 0 20px hsl(210 100% 60% / 0.5);
-  --glow-green: 0 0 20px hsl(140 100% 55% / 0.5);
-  --glow-purple: 0 0 20px hsl(270 80% 65% / 0.5);
 
   --tracking-normal: 0em;
   --spacing: 0.25rem;
